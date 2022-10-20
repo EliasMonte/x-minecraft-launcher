@@ -1,0 +1,1199 @@
+{
+  "en": {
+    "./AppAddInstanceDialog.vue": {
+      "downloadedNotification": "The modpack {name} downloaded. Do you want to create instance for it?"
+    },
+    "./AppFeedbackDialog.vue": {
+      "feedback": {
+        "name": "Feedback",
+        "description": "I found a Bug or I want to make a suggestion",
+        "channel": "Channels",
+        "discord": "Discord",
+        "discordDescription": "Join Discord Channel",
+        "discordJoin": "Join",
+        "github": "Github Issue",
+        "githubDescription": "Open an Github Issue to tell your thought",
+        "githubOpenIssue": "Github",
+        "qq": "QQ Group",
+        "qqDescription": "Enter the feedback QQ group and direct talk with authors. Group Number: {number}",
+        "qqEnterGroup": "Join"
+      }
+    },
+    "./AppLaunchBlockedDialog.vue": {
+      "launchGeneralException": {
+        "title": "Launch Failed",
+        "description": "Some errors cause the launch failed."
+      },
+      "launchInvalidJavaPath": {
+        "title": "Invalid Java Path",
+        "description": "The selected java is missing or invalid. Please select a new one. <span class=\"highlight\"> {javaPath} </span>"
+      },
+      "launchJavaNoPermission": {
+        "title": "No permission to launch",
+        "description": "The launcher don't have permission to execute the java <span class=\"highlight\"> {javaPath} </span>. Either change the permission of the java file or raise the permission of launcher."
+      },
+      "launchNoProperJava": {
+        "title": "No proper java found",
+        "description": "No proper java can be selected to launch the game. ({javaPath} is invalid?)"
+      },
+      "launchNoVersionInstalled": {
+        "title": "No version selected",
+        "description": "Cannot resolve version <span class=\"highlight\">{version}</span> to launch."
+      },
+      "unexpectedText": "This is unexpected. You can restart the launcher to mitigate the issue. Please contact author if this issue happens again.",
+      "launchUserStatusRefreshFailed": {
+        "title": "Fail to validate user status",
+        "description": "Cannot refresh current selected user status."
+      },
+      "userAcquireMicrosoftTokenFailed": "Acquire Microsoft token failed. Please check retry or check your Microsoft account.",
+      "userCheckGameOwnershipFailed": "Failed to check Minecraft ownership. Please retry or check your network.",
+      "userExchangeXboxTokenFailed": "Failed to exchange xbox token from Microsoft token. Please retry or check your network.",
+      "userLoginMinecraftByXboxFailed": "Failed to login Minecraft with xbox token. Please retry or check your network."
+    },
+    "./AppShareInstanceDialog.vue": {
+      "shareNotifyTitle": "Share Instance",
+      "downloadNotifyTitle": "Download Instance from {user}",
+      "description": "After you share the profile, other place can download these files through your PC.",
+      "downloadDescription": "Please verify the files your peer provided to you. Select the file you want to download.",
+      "share": "Share",
+      "cancel": "Cancel",
+      "cancelShare": "Cancel Share",
+      "shareTitle": "Share game files to other player",
+      "downloadTitle": "Download files from other peers",
+      "baseInfo": "Basic Setting",
+      "filesToShare": "Choose files to share",
+      "filesToDownload": "Choose files to download",
+      "downloadToLocal": "Download to current instance",
+      "instanceShare": "{user} just shared a game files to you"
+    },
+    "./BaseSetting.vue": {
+      "title": "Settings"
+    },
+    "./BaseSettingGeneral.vue": {
+      "title": "General",
+      "showLog": "Show Minecraft Log",
+      "showLogHint": "This will popup a window to stream Minecraft log after game started",
+      "hideLauncher": "Hide the launcher after launch",
+      "fastLaunch": "Turbo Launch",
+      "fastLaunchHint": "Ignore the user status and existed unfixed problems",
+      "shaderPackHint": "Enable or disable shader packs to this launch profile",
+      "resourcepackHint": "Enable or disable resource packs to this launch profile",
+      "modHint": "Enable or disable the Mods of this launch profile",
+      "saveHint": "View and modify the saves of this launch profile"
+    },
+    "./Curseforge.vue": {
+      "curseforge": {
+        "mc-mods": {
+          "description": "View and download mods packs from Curseforge",
+          "name": "Mods"
+        },
+        "modpacks": {
+          "description": "View and download modpacks from Curseforge",
+          "name": "Modpacks"
+        },
+        "search": "Search",
+        "texture-packs": {
+          "description": "View and download resource packs from Curseforge",
+          "name": "Resource Packs"
+        },
+        "worlds": {
+          "description": "View and download worlds from Curseforge",
+          "name": "Worlds"
+        },
+        "recentFiles": "Recent Files",
+        "project": {
+          "description": "Description",
+          "files": "Files",
+          "images": "Images"
+        },
+        "installTo": "Install to {path}",
+        "installToStorage": "Install to Storage",
+        "file": {
+          "gameVersion": "Game Version",
+          "releaseType": "Release Type",
+          "sortByDate": "Date",
+          "sortByName": "File Name"
+        },
+        "fileReleaseType": {
+          "alpha": "Alpha",
+          "beta": "Beta",
+          "release": "Release"
+        },
+        "install": "Install",
+        "installed": "Installed",
+        "downloadOnly": "Download",
+        "downloaded": "Downloaded",
+        "createdDate": "Created Date",
+        "totalDownloads": "Total Downloads",
+        "lastUpdate": "Last Update Date"
+      }
+    },
+    "./CurseforgeProject.vue": {
+      "curseforge": {
+        "recentFiles": "Recent Files",
+        "project": {
+          "description": "Description",
+          "files": "Files",
+          "images": "Images"
+        }
+      }
+    },
+    "./CurseforgeProjectDestMenu.vue": {
+      "curseforge": {
+        "installTo": "Install to {path}",
+        "installToStorage": "Install to Storage"
+      }
+    },
+    "./CurseforgeProjectFiles.vue": {
+      "curseforge": {
+        "file": {
+          "gameVersion": "Game Version",
+          "releaseType": "Release Type",
+          "sortByDate": "Date",
+          "sortByName": "File Name"
+        },
+        "fileReleaseType": {
+          "alpha": "Alpha",
+          "beta": "Beta",
+          "release": "Release"
+        }
+      }
+    },
+    "./CurseforgeProjectFilesTile.vue": {
+      "curseforge": {
+        "install": "Install",
+        "installed": "Installed",
+        "downloadOnly": "Download",
+        "downloaded": "Downloaded"
+      }
+    },
+    "./CurseforgeProjectHeader.vue": {
+      "curseforge": {
+        "createdDate": "Created Date",
+        "totalDownloads": "Total Downloads",
+        "lastUpdate": "Last Update Date"
+      }
+    },
+    "./FeedTheBeast.vue": {
+      "search": "Search In FTB"
+    },
+    "./FeedTheBeastCard.vue": {
+      "search": "Search"
+    },
+    "./FeedTheBeastProject.vue": {
+      "overview": "Overview",
+      "details": "Details",
+      "changelog": "Changelog",
+      "versions": "Versions",
+      "install": "Install {version}"
+    },
+    "./HomeJavaIssueDialog.vue": {
+      "missingJava": "Missing Java",
+      "missingJavaHint": "The Launcher cannot detect any java in your computer. You can:",
+      "incompatibleJava": "Incompatible Java",
+      "incompatibleJavaHint": "Current Java might be incompatible with selected Minecraft!",
+      "recommendedVersionHint": "The {version} recommend to use Java with range {range}。",
+      "needDownloadHint": "Cannot find proper Java version in your computed. Recommend to download a new one.",
+      "selectMatchedHint": "Found proper local Java versions. You can choose these local Javas.",
+      "selectSecondaryHint": "Found some local Java versions, but they might not suitable to the criteria. You can still use them to launch, but this issue will still appear.",
+      "optionManualDownload": {
+        "message": "Launcher will redirect you to the Orecale JRE download page.",
+        "name": "Manually Download"
+      },
+      "optionSelectJava": {
+        "message": "Maybe the launcher doesn't found your Java. You can tell the launcher where it is.",
+        "name": "Select Java in your computer"
+      },
+      "optionAutoDownload": {
+        "message": "Launcher will download and install Java from Mojang's source for you.",
+        "name": "Automatically Download"
+      },
+      "optionSwitch": {
+        "disabled": "There is no Java {version} found in database now!",
+        "message": "Use existed Java {version} in you PC",
+        "name": "Switch to {version}"
+      }
+    },
+    "./HomeLaunchMultiInstanceDialog.vue": {
+      "title": "Multiple Instances",
+      "description": "You are launching multiple instances of Minecraft. Are you sure?",
+      "confirm": "Yes, Launch"
+    },
+    "./HomeSyncButton.vue": {
+      "update": "Sync Instance"
+    },
+    "./HomeSyncDialog.vue": {
+      "pull": "Pull",
+      "push": "Push",
+      "title": "Instance Sync"
+    },
+    "./HomeSyncDialogPull.vue": {
+      "failText": "Fail to fetch update. {url}",
+      "update": "Update",
+      "refresh": "Refresh"
+    },
+    "./HomeSyncDialogPush.vue": {
+      "unknownError": "Unknown Server Error. Please retry.",
+      "authError": "Bad user authentication. Please make sure you have privilege to upload files of the server!",
+      "refresh": "Refresh",
+      "upload": "Upload Instance"
+    },
+    "./MultiplayerDialogInitiate.vue": {
+      "multiplayer": {
+        "enterRemoteTokenHint": "Once your peer enter your token, you need to enter his token to the text area below. Click confirm to connect.",
+        "copyLocalHint": "\"Please copy the local SDP text and send it to your object to have your object enter this text in the join connection <span>A token can be only used for <span style=\"color: red; font-weight: bold;\">one peer</span>! You cannot send the same token to multiple peer!</span> <br> <span style=\"color: rgba(255,255,255,0.7); font-style: italic;\">If you need to connect multiple peers, you need to create <span style=\"font-weight: bold; color: rgba(245, 158, 11)\">multiple</span> connections.</span>\"\n",
+        "gatheringIce": "\"Please wait for the ICE server to collect enough information about your network. If you are impatient and there are enough information, you can give the current SDP to the other party in advance and click Next Please send the <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\" >Local Token</span> to your peer, you peer enter your token in <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\"> Join Connection </span> section. <br> The ICE server might need some time to collect your info to create <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">Local token</span>.<br> You do not need to wait until the ICE status complete. If the token below remain unchanged, you can copy it and send to you peer.\"\n"
+      },
+      "copied": "Copied!",
+      "copyUrl": "Copy URL"
+    },
+    "./MultiplayerDialogReceive.vue": {
+      "multiplayer": {
+        "sendTokenToRemote": "Send Token to Remote",
+        "receiveHint": "After the other party enters your token, your connection will create automatically. Now you can close the dialog.",
+        "receiveRemoteTokenHint": "Please enter the token from your peer here.",
+        "gatheringIce": "\"Please wait for the ICE server to collect enough information about your network. If you are impatient and there are enough information, you can give the current SDP to the other party in advance and click Next Please send the <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\" >Local Token</span> to your peer, you peer enter your token in <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\"> Join Connection </span> section. <br> The ICE server might need some time to collect your info to create <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">Local token</span>.<br> You do not need to wait until the ICE status complete. If the token below remain unchanged, you can copy it and send to you peer.\"\n"
+      }
+    },
+    "./SaveCopyToDialog.vue": {
+      "save": {
+        "copy": {
+          "name": "Copy Save",
+          "cancel": "Cancel Copy",
+          "confirm": "Start Copy",
+          "description": "Please select destination profile(s) you want the save to go.",
+          "title": "Copy Save to Other Profile"
+        }
+      }
+    },
+    "./SettingAppearance.vue": {
+      "setting": {
+        "blurAppBar": "Blur app bar",
+        "appearance": "Appearance",
+        "resetToDefault": "Reset to Default",
+        "backgroundImage": "Background image",
+        "backgroundImageBlur": "Image blur",
+        "backgroundImageBlurDescription": "Drag to blur, easy",
+        "backgroundImageClear": "clear",
+        "backgroundImageDescription": "Select an image as background or clear",
+        "backgroundImageFit": {
+          "contain": "Contain",
+          "cover": "Cover",
+          "name": "Image Fit"
+        },
+        "backgroundImageSelect": "select",
+        "backgroundType": "Background Type",
+        "backgroundTypeDescription": "Show special effect on background (This may impact performance)",
+        "backgroundTypes": {
+          "halo": "Halo",
+          "image": "Image",
+          "none": "None",
+          "particle": "Particle",
+          "video": "video"
+        },
+        "backgroundVideo": "Background Video",
+        "backgroundVideoDescription": "select or clear video",
+        "backgroundVideoSelect": "select",
+        "backgroundVideoVolume": "volume",
+        "backgroundVideoVolumeDescription": "drag to adjust volume",
+        "blurMainBody": "Blur Main Body",
+        "blurMainBodyDescription": "Should the launcher right pane be blurred",
+        "colorTheme": {
+          "appBarColor": "App Bar",
+          "description": "Change the colors in the theme",
+          "errorColor": "Error Color",
+          "name": "Theme Color",
+          "primaryColor": "Primary Color",
+          "secondaryColor": "Secondary Color",
+          "sideBarColor": "Side Bar",
+          "backgroundColor": "Background Color",
+          "warningColor": "Warning Color"
+        },
+        "darkTheme": "Theme",
+        "darkThemeDescription": "Choose the dark or light theme",
+        "particleMode": {
+          "name": "Particle Mode",
+          "bubble": "Bubble",
+          "push": "Push",
+          "remove": "Remove",
+          "repulse": "Repulse"
+        },
+        "showParticle": "Show Particles",
+        "showParticleDescription": "Show particles in background (May impact performance)",
+        "particleModeDescription": "Select the particle click behavior",
+        "theme": {
+          "dark": "Dark Theme",
+          "light": "Light Theme",
+          "system": "Use System Theme"
+        },
+        "blurSidebar": "Blur sidebar"
+      }
+    },
+    "./SettingGeneral.vue": {
+      "setting": {
+        "general": "General",
+        "language": "Language",
+        "languageDescription": "The display language",
+        "location": "Store Location",
+        "browseRoot": "Browse",
+        "showRoot": "Show",
+        "useBmclAPI": "Use BMCL API",
+        "useBmclAPIDescription": "Use BMCLAPI to download Minecraft when you are in China Mainland. (This won't affect if you're not in China mainland)",
+        "apiSets": {
+          "official": "Official (Mojang)",
+          "auto": "Auto (Determine by network)"
+        },
+        "useProxy": "HTTP Proxy",
+        "useProxyDescription": "The proxy server address for the http request"
+      },
+      "proxy": {
+        "host": "Host",
+        "port": "Port"
+      }
+    },
+    "./SettingMigrationDialog.vue": {
+      "directoryCriteriaHint": "Please make sure your new directory location is an EMPTY directory!",
+      "selectRootDirectory": "Select Root Directory",
+      "placeholder": "Please click here to select directory",
+      "migrationDestinationIsFile": "Migration destination is a file! Please select an empty directory!",
+      "migrationDestinationIsNotEmptyDirectory": "Migration destination is not an empty directory! Please make sure you select an empty directory!",
+      "unknownError": "Unknown Error! Please retry or contact the developer!"
+    },
+    "./SettingUpdate.vue": {
+      "setting": {
+        "allowPrerelease": "Download Prerelease",
+        "allowPrereleaseDescription": "Prerelease might be instable",
+        "autoDownload": "Auto Download",
+        "autoDownloadDescription": "Auto Download Update if it's Avaiable",
+        "autoInstallOnAppQuit": "Autoinstall",
+        "autoInstallOnAppQuitDescription": "Autoinstall the Update on App Quit",
+        "checkUpdate": "Check Update",
+        "update": "Update",
+        "latestVersion": "Latest Version",
+        "viewUpdate": "View Update Detail"
+      }
+    }
+  },
+  "zh-CN": {
+    "./AppAddInstanceDialog.vue": {
+      "downloadedNotification": "整合包 {name} 下载成功。是否现在创建整合包实例？"
+    },
+    "./AppFeedbackDialog.vue": {
+      "feedback": {
+        "name": "反馈",
+        "description": "我找到了一个BUG/我想反馈",
+        "channel": "联系渠道",
+        "discord": "Discord",
+        "discordDescription": "加入 Discord 讨论组",
+        "discordJoin": "加入",
+        "github": "Github Issue",
+        "githubDescription": "通过 Github Issue 来反应你的想法",
+        "githubOpenIssue": "Github",
+        "qq": "QQ 群",
+        "qqDescription": "加入反馈群直接和作者聊聊吧，群号 {number}",
+        "qqEnterGroup": "加群"
+      }
+    },
+    "./AppLaunchBlockedDialog.vue": {
+      "launchGeneralException": {
+        "title": "无法启动",
+        "description": "一些未知错误导致启动失败。"
+      },
+      "launchInvalidJavaPath": {
+        "title": "Java 路径无效",
+        "description": "当前 Java 路径可能无效，请检查 Java 可执行文件是否存在 <span class=\"highlight\"> {javaPath} </span>"
+      },
+      "launchJavaNoPermission": {
+        "title": "无权限使用 Java",
+        "description": "没有权限执行 <span class=\"highlight\"> {javaPath} </span>，请尝试给启动器更高权限，给 Java 文件增加可执行权限，或换一个 Java。"
+      },
+      "launchNoProperJava": {
+        "title": "没有合适的 Java",
+        "description": "找不到合适的 Java 来启动游戏。({javaPath} 可能无效？)"
+      },
+      "launchNoVersionInstalled": {
+        "title": "无法找到安装的 Minecraft",
+        "description": "找不到 Minecraft 启动。当前版本是 <span class=\"highlight\">{version}</span>。"
+      },
+      "unexpectedText": "这是意料之外的错误，你可以重启启动器来尝试缓解问题，请联系作者来修复。",
+      "launchUserStatusRefreshFailed": {
+        "title": "验证账户失败",
+        "description": "无法验证当前账户信息"
+      },
+      "userAcquireMicrosoftTokenFailed": "微软令牌获取失败。请重试或者检查你的微软账号。",
+      "userCheckGameOwnershipFailed": "检测 Minecraft 所有权失败。请重试或检查你的网络。",
+      "userExchangeXboxTokenFailed": "通过微软令牌交换 Xbox 令牌失败。请重试或检查你的网络。",
+      "userLoginMinecraftByXboxFailed": "使用 Xbox 令牌登录 Minecraft 失败。请重试或者检查你的网路。"
+    },
+    "./AppShareInstanceDialog.vue": {
+      "shareNotifyTitle": "分享配置",
+      "description": "分享后，你的联机伙伴将会可以通过你下载你分享的游戏资源",
+      "downloadDescription": "请选择你想从你的小伙伴那下载的文件。",
+      "share": "分享",
+      "cancel": "取消",
+      "cancelShare": "取消分享",
+      "shareTitle": "分享启动配置给其他玩家",
+      "downloadTitle": "从其他玩家那获得游戏资源",
+      "baseInfo": "分享的基本配置",
+      "filesToShare": "选择分享的文件",
+      "filesToDownload": "选择你想下载的文件",
+      "downloadToLocal": "下载到当前实例种",
+      "instanceShare": "{user} 给你分享了他的游戏配置"
+    },
+    "./BaseSetting.vue": {
+      "title": "游戏设置"
+    },
+    "./BaseSettingGeneral.vue": {
+      "title": "常规设置",
+      "showLog": "Minecraft 启动后显示日志",
+      "showLogHint": "游戏开启后将弹出一个显示 Minecraft 日志的窗口",
+      "hideLauncher": "Minecraft 启动后隐藏启动器",
+      "fastLaunch": "快速启动",
+      "fastLaunchHint": "启动时跳过刷新用户和没有修复的问题",
+      "shaderPackHint": "调整此配置的光影包",
+      "resourcepackHint": "调整本启动配置使用的资源包",
+      "modHint": "调整此启动配置所使用的的 Mod",
+      "saveHint": "浏览或修改此配置的存档"
+    },
+    "./Curseforge.vue": {
+      "curseforge": {
+        "mc-mods": {
+          "description": "从 Curseforge 上安装 Mods",
+          "name": "Mods"
+        },
+        "modpacks": {
+          "description": "从 Curseforge 上安装整合包",
+          "name": "整合包"
+        },
+        "name": "浏览 Curseforge",
+        "search": "搜索",
+        "texture-packs": {
+          "description": "从 Curseforge 上安装资源包",
+          "name": "资源包"
+        },
+        "worlds": {
+          "description": "从 Curseforge 上安装世界存档",
+          "name": "世界存档"
+        },
+        "recentFiles": "近期文件",
+        "project": {
+          "description": "简介",
+          "files": "文件",
+          "images": "图片"
+        },
+        "installTo": "安装到 {path}",
+        "installToStorage": "安装到库",
+        "file": {
+          "gameVersion": "游戏版本",
+          "releaseType": "类型",
+          "sortByDate": "日期",
+          "sortByName": "文件名"
+        },
+        "fileReleaseType": {
+          "release": "稳定版"
+        },
+        "downloadOnly": "只下載",
+        "downloaded": "已下載",
+        "install": "安裝",
+        "installed": "已安裝",
+        "createdDate": "创建日期",
+        "totalDownloads": "总下载量",
+        "lastUpdate": "上次更新日期"
+      }
+    },
+    "./CurseforgeCategories.vue": {
+      "Fabric": "Fabric",
+      "Cosmetic": "外观/装饰",
+      "Vanilla+": "原版+",
+      "Armor, Tools, and Weapons": "护甲，工具和武器",
+      "QoL": "QoL",
+      "Map and Information": "地图和信息",
+      "Twitch Integration": "Twitch 集成",
+      "Addons": "插件",
+      "Utility & QoL": "工具和 QoL",
+      "World Gen": "世界生成",
+      "Adventure and RPG": "冒险和 RPG",
+      "Magic": "魔法",
+      "API and Library": "API 和库",
+      "Technology": "科技",
+      "Redstone": "红石",
+      "Server Utility": "服务端工具",
+      "Miscellaneous": "杂项",
+      "Food": "食物",
+      "Storage": "存储",
+      "MCreator": "MCreator",
+      "FancyMenu": "FancyMenu",
+      "Education": "教育",
+      "Medieval": "中世纪",
+      "Photo Realistic": "真实风格",
+      "Animated": "动画",
+      "Steampunk": "蒸汽朋克",
+      "Data Packs": "数据包",
+      "Modern": "现代",
+      "Traditional": "传统",
+      "Font Packs": "字体",
+      "Mod Support": "Mod 集成",
+      "Multiplayer": "多人联机",
+      "Mini Game": "小游戏",
+      "Combat / PvP": "竞技/PVP",
+      "Exploration": "探索",
+      "FTB Official Pack": "FTB 官方包",
+      "Small / Light": "轻量级",
+      "Skyblock": "空岛",
+      "Quests": "任务",
+      "Map Based": "基于地图",
+      "Tech": "科技",
+      "Sci-Fi": "科幻",
+      "Extra Large": "超大型",
+      "Hardcore": "硬核",
+      "Game Map": "游戏地图",
+      "Creation": "创造模式",
+      "Parkour": "跑酷",
+      "Modded World": "Mod 集成",
+      "Survival": "生存",
+      "Adventure": "冒险",
+      "Puzzle": "解密"
+    },
+    "./CurseforgeProject.vue": {
+      "curseforge": {
+        "recentFiles": "近期文件",
+        "project": {
+          "description": "简介",
+          "files": "文件",
+          "images": "图片"
+        }
+      }
+    },
+    "./CurseforgeProjectDestMenu.vue": {
+      "curseforge": {
+        "installTo": "安装到 {path}",
+        "installToStorage": "安装到库"
+      }
+    },
+    "./CurseforgeProjectFiles.vue": {
+      "curseforge": {
+        "file": {
+          "gameVersion": "游戏版本",
+          "releaseType": "类型",
+          "sortByDate": "日期",
+          "sortByName": "文件名"
+        },
+        "fileReleaseType": {
+          "release": "稳定版"
+        }
+      }
+    },
+    "./CurseforgeProjectFilesTile.vue": {
+      "curseforge": {
+        "downloadOnly": "只下載",
+        "downloaded": "已下載",
+        "install": "安裝",
+        "installed": "已安裝"
+      }
+    },
+    "./CurseforgeProjectHeader.vue": {
+      "curseforge": {
+        "createdDate": "创建日期",
+        "totalDownloads": "总下载量",
+        "lastUpdate": "上次更新日期"
+      }
+    },
+    "./FeedTheBeast.vue": {
+      "search": "在 FTB 中搜索"
+    },
+    "./FeedTheBeastCard.vue": {
+      "search": "搜索"
+    },
+    "./FeedTheBeastProject.vue": {
+      "overview": "总览",
+      "details": "具体信息",
+      "changelog": "更变日志",
+      "versions": "版本",
+      "install": "安装 {version}"
+    },
+    "./HomeJavaIssueDialog.vue": {
+      "missingJava": "没有找到 Java",
+      "missingJavaHint": "启动器在你的电脑上没有找到任何Java。你可以尝试：",
+      "incompatibleJava": "当前的 Java 版本可能不兼容",
+      "incompatibleJavaHint": "当前已选择 Java {javaVersion}。此 Java 可能无法运已选择的 Minecraft 版本",
+      "recommendedVersionHint": "版本 {version} 推荐使用 Java 版本范围 {range}。",
+      "needDownloadHint": "在你的电脑上没找到合适的 Java 版本，推荐下载新的 Java。",
+      "selectMatchedHint": "本地找到了符合的 Java 版本，你可以选择本地 Java。",
+      "selectSecondaryHint": "本地找到了几个 Java 版本，但都不是完全符合要求的 Java。你仍旧可以选择这些 Java 启动，但此提示还会再次出现。",
+      "optionManualDownload": {
+        "message": "启动器将把你转到Oracle官方JRE下载网站",
+        "name": "手动下载"
+      },
+      "optionSelectJava": {
+        "message": "也许只是启动器没找到你电脑里的Java,你可以手工选择一下",
+        "name": "手工选择Java的位置"
+      },
+      "optionAutoDownload": {
+        "message": "启动器将从 Mojang 源下载并安装 Java {version}",
+        "name": "自动下载"
+      },
+      "optionSwitch": {
+        "disabled": "在电脑中没有检测到 Java {version}，无法切换",
+        "message": "启动器将使用您现在安装的 {version}",
+        "name": "切换到已有的 Java {version}"
+      }
+    },
+    "./HomeLaunchMultiInstanceDialog.vue": {
+      "title": "多实例启动",
+      "description": "你正在尝试启动多个 Minecraft，你确定么？",
+      "confirm": "是的，多实例启动"
+    },
+    "./HomeSyncButton.vue": {
+      "update": "更新实例"
+    },
+    "./HomeSyncDialog.vue": {
+      "pull": "拉取更新",
+      "push": "上传实例",
+      "title": "实例同步"
+    },
+    "./HomeSyncDialogPull.vue": {
+      "failText": "获取更新失败. {url}",
+      "update": "更新",
+      "refresh": "刷新"
+    },
+    "./HomeSyncDialogPush.vue": {
+      "unknownError": "未知错误，请重试",
+      "authError": "用户验证失败，请确定你是更新服务器的管理员！",
+      "refresh": "刷新",
+      "upload": "上传更新"
+    },
+    "./MultiplayerDialogInitiate.vue": {
+      "multiplayer": {
+        "enterRemoteTokenHint": "当你的联机伙伴输入你的令牌后，你需要将他的令牌输入到下面的文字框中，并点击确定开始连接。",
+        "copyLocalHint": "<span>一段令牌只能用<span style=\"color: red; font-weight:bold;\">一次</span>！你不能将一个令牌发送给多个小伙伴！</span> <br> <span style=\"color: rgba(255,255,255,0.7); font-style: italic;\">如果有多个小伙伴要加入你需要<span style=\"font-weight: bold; color: rgba(245, 158, 11)\">多次</span>建立连接。</span>\n",
+        "gatheringIce": "请将<span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">本地令牌</span>发送给你的联机伙伴，你的联机伙伴在 <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\"> 加入连接 </span> 中输入这段文字。 <br> 期间 ICE 服务器可能需要时间收集足够信息来创建<span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">本地令牌</span>。 <br> <span style=\"color: rgba(255,255,255,0.7);\"> 你不需要等 ICE 服务器完全收集完毕，当下面的令牌已经有内容并且不怎么变化后，你可以提前将令牌复制给对方。 </span>\n"
+      },
+      "copied": "已复制!",
+      "copyUrl": "复制 URL"
+    },
+    "./MultiplayerDialogReceive.vue": {
+      "multiplayer": {
+        "sendTokenToRemote": "将本地令牌给你的联机伙伴",
+        "receiveHint": "在对方输入你的令牌后，你们之间的连接会自动创建。现在你已经可以点击完成了。",
+        "receiveRemoteTokenHint": "请将联机伙伴的令牌粘贴在此处，并点击下一步",
+        "gatheringIce": "请将<span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">本地令牌</span>发送给你的联机伙伴，你的联机伙伴在 <span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\"> 加入连接 </span> 中输入这段文字。 <br> 期间 ICE 服务器可能需要时间收集足够信息来创建<span class=\"v-chip v-chip--label v-size--small\" style=\"text-font: bold\">本地令牌</span>。 <br> <span style=\"color: rgba(255,255,255,0.7);\"> 你不需要等 ICE 服务器完全收集完毕，当下面的令牌已经有内容并且不怎么变化后，你可以提前将令牌复制给对方。 </span>\n"
+      }
+    },
+    "./SaveCopyToDialog.vue": {
+      "save": {
+        "copy": {
+          "name": "复制存档",
+          "cancel": "取消复制",
+          "confirm": "开始复制",
+          "description": "请勾选你想让存档复制到的启动配置（目标启动配置）",
+          "title": "复制存档到其他启动配置"
+        }
+      }
+    },
+    "./SettingAppearance.vue": {
+      "setting": {
+        "blurAppBar": "顶端栏模糊",
+        "appearance": "外观",
+        "resetToDefault": "重置到默认配色",
+        "backgroundImage": "背景图片",
+        "backgroundImageBlur": "背景模糊",
+        "backgroundImageBlurDescription": "拖动以模糊背景",
+        "backgroundImageClear": "清空",
+        "backgroundImageDescription": "选择一张背景图片或清空当前图片",
+        "backgroundImageFit": {
+          "contain": "包含",
+          "cover": "覆盖",
+          "name": "放置方式"
+        },
+        "backgroundImageSelect": "选择",
+        "backgroundType": "背景效果",
+        "backgroundTypeDescription": "背景是否显示特效（如果觉得卡就可以关掉）",
+        "backgroundTypes": {
+          "halo": "光晕",
+          "image": "图片",
+          "none": "无",
+          "particle": "粒子",
+          "video": "视频"
+        },
+        "backgroundVideo": "背景视频",
+        "backgroundVideoDescription": "选择一个背景视频或清空当前",
+        "backgroundVideoSelect": "选择",
+        "backgroundVideoVolume": "视频音量",
+        "backgroundVideoVolumeDescription": "拖动以调整音量",
+        "blurMainBody": "模糊窗口主体",
+        "blurMainBodyDescription": "是否将启动器窗口右侧主体模糊",
+        "colorTheme": {
+          "appBarColor": "顶端栏",
+          "description": "改变主题中的配色",
+          "errorColor": "错误颜色",
+          "name": "主题颜色",
+          "primaryColor": "主要颜色",
+          "secondaryColor": "次要颜色",
+          "backgroundColor": "背景颜色",
+          "sideBarColor": "侧边栏",
+          "warningColor": "警告颜色"
+        },
+        "darkTheme": "主题",
+        "darkThemeDescription": "选择深色或浅色主题",
+        "particleMode": {
+          "name": "粒子特效",
+          "bubble": "气泡",
+          "push": "增加",
+          "remove": "移除",
+          "repulse": "击退"
+        },
+        "particleModeDescription": "选择当你点击粒子时的特效",
+        "theme": {
+          "dark": "暗色主题",
+          "light": "亮色主题",
+          "system": "跟随系统"
+        },
+        "showParticle": "显示粒子",
+        "showParticleDescription": "是否在背景显示粒子效果 (这会影响性能，觉得卡可以关了)",
+        "blurSidebar": "侧边栏模糊"
+      }
+    },
+    "./SettingGeneral.vue": {
+      "setting": {
+        "general": "基本设置",
+        "language": "语言",
+        "languageDescription": "当前显示的语言",
+        "location": "数据存储位置",
+        "browseRoot": "更改",
+        "showRoot": "浏览",
+        "useBmclAPI": "使用 BMCL API",
+        "useBmclAPIDescription": "当你在大陆时，优先使用 BMCLAPI 来下载 Minecraft",
+        "useProxy": "HTTP 代理设置",
+        "useProxyDescription": "使用代理服务器可以某些服务的访问",
+        "apiSets": {
+          "official": "官方 (Mojang)",
+          "auto": "自动 (根据网络决定)"
+        }
+      },
+      "proxy": {
+        "host": "服务器地址",
+        "port": "端口号"
+      }
+    },
+    "./SettingMigrationDialog.vue": {
+      "directoryCriteriaHint": "请确保你选择的新的文件夹是一个<span class=\"font-bold text-lg mx-1\">空</span>文件夹。",
+      "selectRootDirectory": "选择新的根目录",
+      "placeholder": "点击来选择新的根目录",
+      "migrationDestinationIsFile": "迁移目标地址是个文件而不是文件夹！请重新选择一个空的文件夹！",
+      "migrationDestinationIsNotEmptyDirectory": "迁移目标不是一个空的文件夹！请确保你选择了一个空的文件夹！",
+      "unknownError": "未知错误，请联系作者或重试。"
+    },
+    "./SettingUpdate.vue": {
+      "setting": {
+        "update": "升级设置",
+        "allowPrerelease": "是否下载抢先版",
+        "allowPrereleaseDescription": "抢先版可能不是那么稳定",
+        "latestVersion": "最新版本",
+        "autoDownload": "自动下载",
+        "autoDownloadDescription": "自动下载最新的版本",
+        "autoInstallOnAppQuit": "自动安装",
+        "autoInstallOnAppQuitDescription": "每次 App 退出后自动安装更新",
+        "checkUpdate": "检查更新"
+      }
+    }
+  },
+  "ru": {
+    "./AppFeedbackDialog.vue": {
+      "feedback": {
+        "name": "Обратная связь",
+        "description": "Я обнаружил ошибку или хочу сделать предложение",
+        "discord": "Discord",
+        "discordDescription": "Присоединяйтесь к каналу в Discord",
+        "discordJoin": "Присоединиться",
+        "github": "Github Issue",
+        "githubDescription": "Откройте Issue на Github, чтобы рассказать о предложении",
+        "githubOpenIssue": "Github",
+        "qq": "Группа QQ",
+        "qqDescription": "Войдите в группу для отзывов на QQ и поговорите с авторами напрямую. Номер группы: {number}",
+        "qqEnterGroup": "Присоединиться"
+      }
+    },
+    "./BaseSetting.vue": {
+      "title": "Настройки"
+    },
+    "./BaseSettingGeneral.vue": {
+      "title": "Общие",
+      "showLog": "Показать журнал Minecraft",
+      "showLogHint": "После запуска игры появится всплывающее окно для стриминга лога Minecraft.",
+      "hideLauncher": "Скрыть лаунчер после запуска",
+      "shaderPackHint": "Включить или отключить пакеты шейдеров для данного профиля запуска",
+      "resourcepackHint": "Включение или отключение текстур для этого профиля запуска",
+      "modHint": "Включение или отключение модов этого профиля запуска",
+      "saveHint": "Просмотр и изменение сохранений этого профиля запуска"
+    },
+    "./Curseforge.vue": {
+      "curseforge": {
+        "mc-mods": {
+          "description": "Просматривайте и скачивайте моды с Curseforge",
+          "name": "Моды"
+        },
+        "modpacks": {
+          "description": "Просматривайте и скачивайте модпаки с Curseforge",
+          "name": "Модпаки"
+        },
+        "search": "Поиск",
+        "texture-packs": {
+          "description": "Просматривайте и скачивайте пакеты текстур с Curseforge",
+          "name": "Текстуры"
+        },
+        "worlds": {
+          "description": "Просматривайте и скачивайте миры с Curseforge",
+          "name": "Миры"
+        },
+        "recentFiles": "Последние файлы",
+        "project": {
+          "description": "Описание",
+          "files": "Файлы",
+          "images": "Изображения"
+        },
+        "installTo": "Установить в {path}",
+        "installToStorage": "Установить в хранилище",
+        "file": {
+          "gameVersion": "Версия игры",
+          "releaseType": "Тип выпуска",
+          "sortByDate": "Дата",
+          "sortByName": "Название файла"
+        },
+        "fileReleaseType": {
+          "alpha": "Альфа",
+          "beta": "Бета",
+          "release": "Релиз"
+        },
+        "downloadOnly": "Скачать",
+        "downloaded": "Скачан",
+        "install": "Установить",
+        "installed": "Установлен",
+        "createdDate": "Создан",
+        "totalDownloads": "Скачиваний",
+        "lastUpdate": "Обновлён"
+      }
+    },
+    "./CurseforgeProject.vue": {
+      "curseforge": {
+        "recentFiles": "Последние файлы",
+        "project": {
+          "description": "Описание",
+          "files": "Файлы",
+          "images": "Изображения"
+        }
+      }
+    },
+    "./CurseforgeProjectDestMenu.vue": {
+      "curseforge": {
+        "installTo": "Установить в {path}",
+        "installToStorage": "Установить в хранилище"
+      }
+    },
+    "./CurseforgeProjectFiles.vue": {
+      "curseforge": {
+        "file": {
+          "gameVersion": "Версия игры",
+          "releaseType": "Тип выпуска",
+          "sortByDate": "Дата",
+          "sortByName": "Название файла"
+        },
+        "fileReleaseType": {
+          "alpha": "Альфа",
+          "beta": "Бета",
+          "release": "Релиз"
+        }
+      }
+    },
+    "./CurseforgeProjectFilesTile.vue": {
+      "curseforge": {
+        "downloadOnly": "Скачать",
+        "downloaded": "Скачан",
+        "install": "Установить",
+        "installed": "Установлен"
+      }
+    },
+    "./CurseforgeProjectHeader.vue": {
+      "curseforge": {
+        "createdDate": "Создан",
+        "totalDownloads": "Скачиваний",
+        "lastUpdate": "Обновлён"
+      }
+    },
+    "./HomeJavaIssueDialog.vue": {
+      "missingJava": "Java отсутствует",
+      "missingJavaHint": "Лаунчер не может найти на вашем компьютере Java. Вы можете:",
+      "incompatibleJava": "Несовместимая Java",
+      "incompatibleJavaHint": "Вы можете использовать найденую Java или скачать новую!",
+      "optionManualDownload": {
+        "name": "Скачать вручную",
+        "message": "Лаунчер перенаправит вас на страницу скачивания Orecale JRE."
+      },
+      "optionSelectJava": {
+        "name": "Выберите Java на вашем компьютере",
+        "message": "Видимо лаунчер не нашёл установленную Java. Вы можете указать лаунчеру его расположение."
+      },
+      "optionAutoDownload": {
+        "name": "Скачать автоматически",
+        "message": "Лаунчер скачает и установит Java из исходного кода Mojang."
+      },
+      "optionSwitch": {
+        "name": "Переключить на Java {version}",
+        "disabled": "Сейчас в базе данных нет {version}!",
+        "message": "Используйте существующую Java {version} на своём ПК"
+      }
+    },
+    "./SaveCopyToDialog.vue": {
+      "save": {
+        "copy": {
+          "name": "Копировать сохранение",
+          "cancel": "Отменить копирование",
+          "confirm": "Начать копирование",
+          "description": "Выберите целевые профили, которые вы хотите сохранить.",
+          "title": "Копировать сохранение в другой профиль"
+        }
+      }
+    },
+    "./SettingAppearance.vue": {
+      "setting": {
+        "appearance": "Внешний вид",
+        "backgroundImage": "Изображение фона",
+        "backgroundImageBlur": "Размытие изображения",
+        "backgroundImageBlurDescription": "Перетащите чтобы размыть, легко",
+        "backgroundImageClear": "Очистить",
+        "backgroundImageDescription": "Выберите изображение в качестве фона или очистите его",
+        "backgroundImageSelect": "Выбрать",
+        "backgroundType": "Тип фона",
+        "backgroundTypeDescription": "Показывать спецэффекты на фоне (Может повлиять на производительность)",
+        "backgroundTypes": {
+          "halo": "Ореол",
+          "image": "Изображение",
+          "none": "Ничего",
+          "particle": "Частицы"
+        },
+        "blurMainBody": "Размытие главного окна",
+        "blurMainBodyDescription": "Размытие правой панели лаунчера",
+        "darkTheme": "Тема",
+        "darkThemeDescription": "Выберите тёмную или светлую тему",
+        "particleMode": {
+          "name": "Режим частиц",
+          "bubble": "Пузыри",
+          "push": "Отталкивание",
+          "remove": "Удаление",
+          "repulse": "Отражение"
+        },
+        "particleModeDescription": "Выберите поведение частиц при нажатии",
+        "theme": {
+          "dark": "Dark Тема",
+          "light": "Light Тема",
+          "system": "Use System Тема"
+        },
+        "showParticle": "Показывать частицы",
+        "showParticleDescription": "Показывать частицы фона (Может повлиять на производительность)"
+      }
+    },
+    "./SettingGeneral.vue": {
+      "setting": {
+        "general": "Общие",
+        "language": "Язык",
+        "languageDescription": "Язык программы",
+        "location": "Расположение хранилища",
+        "browseRoot": "Обзор",
+        "showRoot": "Показать",
+        "useBmclAPI": "Использовать BMCLAPI",
+        "useBmclAPIDescription": "Используйте BMCLAPI для скачивания Minecraft, если вы находитесь на Материке Китая. (Это не повлияет, если вы не на Материке Китая)",
+        "useProxy": "HTTP-прокси",
+        "useProxyDescription": "Адрес прокси-сервера для http-запроса"
+      },
+      "proxy": {
+        "host": "Хост",
+        "port": "Порт"
+      }
+    },
+    "./SettingUpdate.vue": {
+      "setting": {
+        "allowPrerelease": "Скачать предрелиз",
+        "allowPrereleaseDescription": "Предрелиз может быть нестабильным",
+        "autoDownload": "Автоскачивание",
+        "autoDownloadDescription": "Автоматически скачивает обновление когда оно доступно",
+        "autoInstallOnAppQuit": "Автоустановка",
+        "autoInstallOnAppQuitDescription": "Автоматически устанавливает обновление при закрытии приложения",
+        "checkUpdate": "Проверить обновление",
+        "update": "Обновление",
+        "viewUpdate": "Сведения об обновлении",
+        "latestVersion": "Последняя версия"
+      }
+    }
+  },
+  "zh-TW": {
+    "./Curseforge.vue": {
+      "curseforge": {
+        "mc-mods": {
+          "description": "從 Curseforge 上安裝 Mods",
+          "name": "Mods"
+        },
+        "modpacks": {
+          "description": "從 Curseforge 上安裝整合包",
+          "name": "整合包"
+        },
+        "name": "瀏覽 Curseforge",
+        "search": "搜索",
+        "texture-packs": {
+          "description": "從 Curseforge 上安裝資源包",
+          "name": "資源包"
+        },
+        "worlds": {
+          "description": "從 Curseforge 上安裝世界存檔",
+          "name": "世界存檔"
+        },
+        "recentFiles": "近期文件",
+        "project": {
+          "description": "簡介",
+          "files": "文件",
+          "images": "圖片"
+        },
+        "installTo": "安裝到 {path}",
+        "installToStorage": "安裝到庫",
+        "file": {
+          "gameVersion": "遊戲版本",
+          "releaseType": "類型",
+          "sortByDate": "日期",
+          "sortByName": "文件名"
+        },
+        "fileReleaseType": {
+          "release": "穩定版"
+        },
+        "createdDate": "創建日期",
+        "totalDownloads": "總下載量",
+        "lastUpdate": "上次更新日期"
+      }
+    },
+    "./CurseforgeProject.vue": {
+      "curseforge": {
+        "recentFiles": "近期文件",
+        "project": {
+          "description": "簡介",
+          "files": "文件",
+          "images": "圖片"
+        }
+      }
+    },
+    "./CurseforgeProjectDestMenu.vue": {
+      "curseforge": {
+        "installTo": "安裝到 {path}",
+        "installToStorage": "安裝到庫"
+      }
+    },
+    "./CurseforgeProjectFiles.vue": {
+      "curseforge": {
+        "file": {
+          "gameVersion": "遊戲版本",
+          "releaseType": "類型",
+          "sortByDate": "日期",
+          "sortByName": "文件名"
+        },
+        "fileReleaseType": {
+          "release": "穩定版"
+        }
+      }
+    },
+    "./CurseforgeProjectHeader.vue": {
+      "curseforge": {
+        "createdDate": "創建日期",
+        "totalDownloads": "總下載量",
+        "lastUpdate": "上次更新日期"
+      }
+    },
+    "./SettingAppearance.vue": {
+      "setting": {
+        "appearance": "外觀",
+        "backgroundImage": "背景圖片",
+        "backgroundImageBlur": "背景模糊",
+        "backgroundImageBlurDescription": "拖動以模糊背景",
+        "backgroundImageClear": "清空",
+        "backgroundImageDescription": "選擇一張背景圖片或清空當前圖片",
+        "backgroundImageFit": {
+          "contain": "包含",
+          "cover": "覆蓋",
+          "name": "放置方式"
+        },
+        "backgroundImageSelect": "選擇",
+        "backgroundType": "背景效果",
+        "backgroundTypeDescription": "背景是否顯示特效（如果覺得卡就可以關掉）",
+        "backgroundTypes": {
+          "halo": "光暈",
+          "image": "圖片",
+          "none": "無",
+          "particle": "粒子",
+          "video": "視頻"
+        },
+        "backgroundVideo": "背景視頻",
+        "backgroundVideoDescription": "選擇一個背景視頻或清空當前",
+        "backgroundVideoSelect": "選擇",
+        "backgroundVideoVolume": "視頻音量",
+        "backgroundVideoVolumeDescription": "拖動以調整音量",
+        "blurMainBody": "模糊窗口主體",
+        "blurMainBodyDescription": "是否將啓動器窗口右側主體模糊",
+        "colorTheme": {
+          "appBarColor": "頂端欄",
+          "description": "改變主題中的配色",
+          "errorColor": "錯誤顏色",
+          "name": "主題顏色",
+          "primaryColor": "主要顏色",
+          "secondaryColor": "次要顏色",
+          "backgroundColor": "背景顏色",
+          "sideBarColor": "側邊欄",
+          "warningColor": "警告顏色"
+        },
+        "darkTheme": "主題",
+        "darkThemeDescription": "選擇深色或淺色主題",
+        "particleMode": {
+          "name": "粒子特效",
+          "bubble": "氣泡",
+          "push": "增加",
+          "remove": "移除",
+          "repulse": "擊退"
+        },
+        "particleModeDescription": "選擇當你點擊粒子時的特效",
+        "theme": {
+          "dark": "暗色主題",
+          "light": "亮色主題",
+          "system": "跟隨系統"
+        },
+        "showParticle": "顯示粒子",
+        "showParticleDescription": "是否在背景顯示粒子效果 (這會影響性能，覺得卡可以關了)"
+      }
+    },
+    "./SettingGeneral.vue": {
+      "setting": {
+        "general": "基本設置",
+        "language": "語言",
+        "languageDescription": "當前顯示的語言",
+        "location": "數據存儲位置",
+        "browseRoot": "更改",
+        "showRoot": "瀏覽",
+        "useBmclAPI": "使用 BMCL API",
+        "useBmclAPIDescription": "當你在大陸時，優先使用 BMCLAPI 來下載 Minecraft",
+        "useProxy": "HTTP 代理設置",
+        "useProxyDescription": "使用代理服務器可以某些服務的訪問"
+      },
+      "proxy": {
+        "host": "服務器地址",
+        "port": "端口號"
+      }
+    },
+    "./SettingUpdate.vue": {
+      "setting": {
+        "update": "升級設置",
+        "allowPrerelease": "是否下載搶先版",
+        "allowPrereleaseDescription": "搶先版可能不是那麼穩定",
+        "alreadyLatest": "已經是最新",
+        "latestVersion": "最新版本",
+        "autoDownload": "自動下載",
+        "autoDownloadDescription": "自動下載最新的版本",
+        "autoInstallOnAppQuit": "自動安裝",
+        "autoInstallOnAppQuitDescription": "每次 App 退出後自動安裝更新",
+        "checkUpdate": "檢查更新"
+      }
+    }
+  }
+}
