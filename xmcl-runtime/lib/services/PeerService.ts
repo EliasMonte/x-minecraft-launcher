@@ -18,7 +18,7 @@ import { PeerSession } from '../entities/peer/connection'
 import { MessageShareManifest } from '../entities/peer/messages/download'
 import { MessageLan } from '../entities/peer/messages/lan'
 import { Inject } from '../util/objectRegistry'
-import { ExposeServiceKey, Singleton, StatefulService } from './Service'
+import { ExposeServiceKey, Lock, Singleton, StatefulService } from './Service'
 import { UserService } from './UserService'
 
 const pBrotliDecompress = promisify(brotliDecompress)
@@ -43,15 +43,6 @@ export class PeerService extends StatefulService<PeerState> implements IPeerServ
   constructor(@Inject(LauncherAppKey) app: LauncherApp,
     @Inject(UserService) private userService: UserService) {
     super(app, () => new PeerState(), async () => {
-      this.log('hello peer service!')
-      try {
-        const mod = require('node-datachannel')
-        this.log(mod)
-      } catch (e) {
-        this.log('fuck my life!!')
-        this.log(e)
-      }
-      this.log('hello peer service 2!')
     })
 
     app.registerUrlHandler((url) => {
@@ -89,8 +80,15 @@ export class PeerService extends StatefulService<PeerState> implements IPeerServ
     })
   }
 
+  async leaveGroup(): Promise<void> {
+    this.group?.quit()
+    this.group = undefined
+    this.state.connectionGroup('')
+  }
+
+  @Lock('joinGroup')
   async joinGroup(id?: string): Promise<void> {
-    if (this.group?.groupId === id) {
+    if (this.group?.groupId && this.group.groupId === id) {
       return
     }
 
@@ -104,45 +102,55 @@ export class PeerService extends StatefulService<PeerState> implements IPeerServ
         if (err) reject(err)
         else resolve(buf)
       }))
-      id = `${this.userService.state.user?.username ?? 'Player'}#${buf.readUint16BE()}`
+      id = `${this.userService.state.gameProfile?.name ?? 'Player'}@${buf.readUint16BE()}`
     }
-    const group = new PeerGroup(id, this.id, (sender) => {
+    const group = await PeerGroup.join(id, this.id, (sender) => {
       // Ask sender to connect to me :)
-      group.connect(sender)
-      // Try to connect to the sender
-      this.initiate(sender)
+      if (!this.peers[sender]) {
+        // Try to connect to the sender
+        this.initiate(sender, true)
+        group.connect(sender)
+      }
     }, (sender) => {
-      // Try to connect to the sender
-      this.initiate(sender)
+      if (!this.peers[sender]) {
+        // Try to connect to the sender
+        this.initiate(sender)
+      }
     }, (sender, sdp, type) => {
+      if (!this.peers[sender]) {
+        // Try to connect to the sender
+        this.initiate(sender)
+      }
       const peer = this.peers[sender]
       peer.connection.setRemoteDescription(sdp, type)
+      peer.descriptionSignal.resolve()
     }, (sender, candidate, mid) => {
+      if (!this.peers[sender]) {
+        // Try to connect to the sender
+        this.initiate(sender)
+      }
       const peer = this.peers[sender]
-      peer.connection.addRemoteCandidate(candidate, mid)
+      peer.descriptionSignal.promise.then(() => {
+        peer.connection.addRemoteCandidate(candidate, mid)
+      })
     })
     this.group = group
-    this.state.connectionGroup(group.id)
+    this.state.connectionGroup(group.groupId)
   }
 
   protected async decode(description: string): Promise<TransferDescription> {
     return JSON.parse((await pBrotliDecompress(Buffer.from(description, 'base64'))).toString('utf-8'))
   }
 
-  async create(): Promise<string> {
-    const id = randomUUID()
-    return id
-  }
-
   @Singleton(id => id)
-  async initiate(expectId?: string): Promise<string> {
+  async initiate(expectId?: string, initiate = false): Promise<string> {
     const setLocalDescription = debounce((payload) => {
       pBrotliCompress(JSON.stringify(payload)).then((s) => s.toString('base64')).then((compressed) => {
         this.state.connectionLocalDescription({ id: payload.session, description: compressed })
       })
     })
 
-    const initiator = !expectId
+    const initiator = !expectId || initiate
     const id = expectId || randomUUID()
 
     const conn = new PeerSession({
@@ -216,14 +224,19 @@ export class PeerService extends StatefulService<PeerState> implements IPeerServ
       sharing: undefined,
     })
 
+    if (initiator) {
+      conn.initiate()
+    }
+
     return id
   }
 
-  async offer(offer: string): Promise<void> {
+  async offer(offer: string): Promise<string> {
     const o = await this.decode(offer) as TransferDescription
     await this.initiate(o.id)
     const peer = this.peers[o.id]
     peer.connection.setRemoteDescription(o.sdp, DescriptionType.Offer)
+    return o.id
   }
 
   async answer(answer: string): Promise<void> {
@@ -271,8 +284,14 @@ export class PeerService extends StatefulService<PeerState> implements IPeerServ
       }
 
       protected async process(): Promise<boolean> {
+        this._total = this.total
+        this._progress = 0
+        this.update(0)
         const stream = self.createDownloadStream(this.url)
         this.stream = stream
+        stream.on('data', (buf) => {
+          this.update(buf.length)
+        })
         await pipeline(stream, createWriteStream(this.destination))
         return true
       }

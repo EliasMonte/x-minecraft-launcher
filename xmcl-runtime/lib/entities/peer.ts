@@ -30,38 +30,64 @@ type RelayPeerMessage = {
 }
 
 export class PeerGroup {
-  private source: EventSource
-
-  constructor(readonly groupId: string, readonly id: string,
+  static async join(groupId: string, id: string,
     onHello: (sender: string) => void,
     onConnect: (sender: string) => void,
     onDescriptor: (sender: string, sdp: string, type: DescriptionType) => void,
     onCandidate: (sender: string, candidate: string, mid: string) => void,
   ) {
-    this.source = new EventSource(`https://api.xmcl.app/group?id=${groupId}`)
-    this.source.onmessage = (ev) => {
-      const payload = JSON.parse(ev.data) as RelayPeerMessage
-      if (payload.type === 'HELLO') {
-        onHello(payload.id)
-      } else {
-        if (payload.receiver !== id) {
-          return
+    const source = new EventSource(`https://api.xmcl.app/group?id=${groupId}`)
+    source.onmessage = (ev) => {
+      try {
+        const payload = JSON.parse(ev.data) as RelayPeerMessage
+        if (payload.type === 'HELLO') {
+          if (payload.id !== id) {
+            onHello(payload.id)
+          }
+        } else {
+          if (payload.receiver !== id) {
+            return
+          }
+          if (payload.type === 'CONNECT') {
+            onConnect(payload.sender)
+          } else if (payload.type === 'DESCRIPTOR') {
+            onDescriptor(payload.sender, payload.sdp, payload.sdpType)
+          } else if (payload.type === 'CANDIDATE') {
+            onCandidate(payload.sender, payload.candidate, payload.mid)
+          }
         }
-        if (payload.type === 'CONNECT') {
-          onConnect(payload.sender)
-        } else if (payload.type === 'DESCRIPTOR') {
-          onDescriptor(payload.sender, payload.sdp, payload.sdpType)
-        } else if (payload.type === 'CANDIDATE') {
-          onCandidate(payload.sender, payload.candidate, payload.mid)
-        }
+      } catch (e) {
+        debugger
       }
     }
-    this.source.onopen = (ev) => {
-      this.send({
+
+    const group = new PeerGroup(source, groupId, id)
+    source.onopen = () => {
+      group.send({
         type: 'HELLO',
         id,
       })
     }
+
+    await new Promise<void>((resolve, reject) => {
+      const onError = (e: any) => {
+        reject(e)
+        source.removeEventListener('open', onResolve)
+        source.removeEventListener('error', onError)
+      }
+      const onResolve = () => {
+        resolve()
+        source.removeEventListener('open', onResolve)
+        source.removeEventListener('error', onError)
+      }
+      source.addEventListener('open', onResolve)
+      source.addEventListener('error', onError)
+    })
+
+    return group
+  }
+
+  constructor(private source: EventSource, readonly groupId: string, readonly id: string) {
   }
 
   connect(id: string) {
@@ -93,7 +119,7 @@ export class PeerGroup {
   }
 
   async send(message: RelayPeerMessage) {
-    await request('https://api.xmcl.app', {
+    await request(`https://api.xmcl.app/group?id=${this.groupId}`, {
       method: 'PUT',
       body: JSON.stringify(message),
     })

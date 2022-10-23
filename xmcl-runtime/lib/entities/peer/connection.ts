@@ -9,6 +9,7 @@ import { PeerHost } from './PeerHost'
 import { ServerProxy } from './ServerProxy'
 import { iceServers } from './stun'
 import { Logger } from '/@main/util/log'
+import { createPromiseSignal } from '/@main/util/promiseSignal'
 
 const getRegistry = (entries: MessageEntry<any>[]) => {
   const reg: Record<string, MessageHandler<any>> = {}
@@ -35,6 +36,8 @@ export class PeerSession {
   private channel: DataChannel | undefined
 
   readonly proxies: ServerProxy[] = []
+
+  readonly descriptionSignal = createPromiseSignal()
 
   constructor(
     readonly host: PeerHost,
@@ -102,7 +105,7 @@ export class PeerSession {
   /**
    * Called in initiator
    */
-  async initiate() {
+  initiate() {
     // host
     this.logger.log('peer initialize')
     this.setChannel(this.connection.createDataChannel(this.id, { ordered: true, protocol: 'metadata' }))
